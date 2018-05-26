@@ -21,9 +21,9 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.0",
+        "yiisoft/yii2": "~2.0.15",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "jasny/bootstrap": "~3.1.0",
+        "bower-asset/jasny-bootstrap": "@dev",
         "kartik-v/bootstrap-fileinput": "~4.1.0"
     },
     "require-dev": {
@@ -34,14 +34,16 @@
             "dosamigos\\fileinput\\": "src"
         }
     },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
-        },
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }
-
